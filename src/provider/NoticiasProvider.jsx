@@ -10,7 +10,7 @@ const NoticiasProvider = ({ children }) => {
 
   useEffect(() => {
     const consultarAPI = async () => {
-      const url = `https://newsapi.org/v2/top-headlines?country=mx&category=${categoria}&apikey=${import.meta.env.VITE_NEWS_API_KEY}`
+      const url = `https://cors-anywhere-mav.herokuapp.com/https://newsapi.org/v2/top-headlines?country=mx&category=${categoria}&apikey=${import.meta.env.VITE_NEWS_API_KEY}`
 
       const { data } = await axios(url)
 
@@ -23,7 +23,7 @@ const NoticiasProvider = ({ children }) => {
 
   useEffect(() => {
     const consultarAPI = async () => {
-      const url = `https://newsapi.org/v2/top-headlines?country=mx&page=${pagina}&category=${categoria}&apikey=${import.meta.env.VITE_NEWS_API_KEY}`
+      const url = `https://cors-anywhere-mav.herokuapp.com/https://newsapi.org/v2/top-headlines?country=mx&page=${pagina}&category=${categoria}&apikey=${import.meta.env.VITE_NEWS_API_KEY}`
 
       const { data } = await axios(url)
 
